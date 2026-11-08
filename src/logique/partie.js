@@ -10,4 +10,9 @@ export class Partie
         this.joueurs = joueurs;
         this.backlog = backlog;
     }
+
+    fonctionnaliteSuivante(){
+        this.fCourante++;
+        afficherFonctionnalite(this.backlog.fonctionnalites[this.fCourante]);
+    }
 }
