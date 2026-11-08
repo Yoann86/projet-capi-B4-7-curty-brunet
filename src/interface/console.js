@@ -24,5 +24,13 @@ export async function initialiserPartie(){
     console.log('\nListe des joueurs enregistrés :', joueurs);
     rl.close();
 
-    return joueurs;
+    const backlog = await chargerBacklog("./src/exemples/backlog-example.json");
+
+    return {joueurs, backlog};
+}
+
+export function afficherFonctionnalite(fonctionnalite){
+    console.log("--- Fonctionnalité à estimer --- \n")
+    console.log(`${fonctionnalite.id} : ${fonctionnalite.titre} \n`);
+    console.log("--- Ouverture des votes ---")
 }
